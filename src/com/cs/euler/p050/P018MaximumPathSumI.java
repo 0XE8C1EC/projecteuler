@@ -1,6 +1,7 @@
 package com.cs.euler.p050;
 
-import org.apache.commons.io.IOUtils;
+import java.io.File;
+
 import org.junit.Test;
 
 import com.cs.euler.EulerBase;
@@ -14,7 +15,7 @@ Find the maximum total from top to bottom of the triangle below:
 
   @Test
   public void resolve() {
-	  long[][] data = loadArrays("data\\p018.txt");
+	  long[][] data = loadArrays("data"+File.separator+"p018.txt");
 	  int E=data.length-1;
 	  for(int i=E-1;i>=0;i--){
 		  for(int j=0;j<=i;j++){
