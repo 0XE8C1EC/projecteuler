@@ -11,7 +11,6 @@ public class P018MaximumPathSumII extends EulerBase{
   /*
 Find the maximum total from top to bottom of the triangle below:
   */
-  
 
   @Test
   public void resolve() {
@@ -22,8 +21,6 @@ Find the maximum total from top to bottom of the triangle below:
 			  data[i][j]+=data[i+1][j]>data[i+1][j+1]?data[i+1][j]:data[i+1][j+1];
 		  }
 	  }
-		  
 	  print(data[0][0]);
   }
-
 }
