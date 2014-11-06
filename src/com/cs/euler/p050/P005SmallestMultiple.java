@@ -8,6 +8,7 @@ import org.junit.Test;
 
 import com.cs.euler.EulerBase;
 import com.cs.euler.utils.Primes;
+import com.cs.euler.utils.Utils;
 
 public class P005SmallestMultiple extends EulerBase {
 	/*
@@ -21,7 +22,7 @@ public class P005SmallestMultiple extends EulerBase {
 		Primes.isPrime(20);
 		Map<Integer, Integer> factors = new HashMap<Integer, Integer>();
 		for (int i = 2; i <= 20; i++) {
-			merge(factors, factorization(i));
+			merge(factors, Utils.factorization(i));
 		}
 		print(factors, mul(factors));
 	}
@@ -43,27 +44,4 @@ public class P005SmallestMultiple extends EulerBase {
 		}
 
 	}
-
-	public Map<Integer, Integer> factorization(int number) {
-		final Map<Integer, Integer> result = new HashMap<Integer, Integer>();
-		for (int i = 2; i <= number; i++) {
-			if (!Primes.isPrime(i)) {
-				continue;
-			}
-			int prime = i;
-			if (prime <= number) {
-				int tmp = number;
-				int count = 0;
-				while (tmp % prime == 0) {
-					count++;
-					tmp = (int) (tmp / prime);
-				}
-				if (count > 0) {
-					result.put(prime, count);
-				}
-			}
-		}
-		return result;
-	}
-
 }

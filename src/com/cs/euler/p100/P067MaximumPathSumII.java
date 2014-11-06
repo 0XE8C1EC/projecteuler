@@ -6,7 +6,7 @@ import org.junit.Test;
 
 import com.cs.euler.EulerBase;
 
-public class P018MaximumPathSumII extends EulerBase{
+public class P067MaximumPathSumII extends EulerBase{
 
   /*
 Find the maximum total from top to bottom of the triangle below:
